@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+body{
+    background-image: url("https://media.istockphoto.com/photos/wood-table-top-on-blur-kitchen-room-counter-background-picture-id1296450286?b=1&k=20&m=1296450286&s=170667a&w=0&h=rSR8n5A3BnV69WfqDfdDIkxlky1ZkecZNJbfaXcZjfs=");
+
+    background-size: 100%;
+         }
+
+        #navbar{
+            display:flex;
+            width:100%;
+            background-color:chocolate;
+            border-radius: 5px;
+            background-image: url("https://media.istockphoto.com/photos/peas-and-pea-pods-picture-id104822169?b=1&k=20&m=104822169&s=170667a&w=0&h=9sg-BT6ep2eD5kIImksSC5RyRoYqnRNoYT-7Pi4fyVU=");
+            background-size: 100%;       
+        }
+        #navbar>p{
+            margin-left: 15px;
+            /* background-color: brown; */
+            border-radius: 5px;
+            color:white;
+            font-size: medium;
+            font-weight: bolder;
+        }
+        #search{
+            margin-left:255px;
+            border-radius: 10px;
+            width:200px;
+            height: 20px;
+            padding:5px;
+            margin-top:9px;
+            font-weight: bolder;
+
+        }
+        #btn{
+            margin-top:10px;
+            font-weight: bolder;
+            margin-left: 2px;
+            border-radius: 10px;
+            width:80px;
+            height:30px;
+            border:0px;
+            color:white;
+            background-color: orangered;
+
+        }
+        #box{
+             display: grid;
+             grid-template-columns: repeat(4,1fr) ;
+
+        }
+        #poster{
+            width:100%;
+        }
+        #div1{
+            border:5px solid red;
+            width:70%;
+            margin:20px;
+            text-align: center;
+            box-shadow: rgb(38, 57, 77) 0px 20px 30px -10px;
+            background-image: url("https://images.unsplash.com/photo-1435224654926-ecc9f7fa028c?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxleHBsb3JlLWZlZWR8OXx8fGVufDB8fHx8&auto=format&fit=crop&w=400&q=60");
+            background-size: 100%;
+        }
+        #div1>p{
+            color:white;
+
+
+        }
+    </style>
+</head>
+<body>
+    <div id="navbar"><img src="https://www.themealdb.com/images/logo-small.png" alt="">
+        <p onclick="window.location.href='index.html'">Home</p>
+        <p onclick="window.location.href='todayrecipe.html'">Today's Recipe</p>
+        <p onclick="window.location.href='latest.html'">Latest Meals</p>
+        <input id="search" oninput="debounce(dishdata,1000)" type="text" placeholder="Search your meal here...">
+        <button id="btn" onclick="dishdata()">Search</button>    
+    </div>
+    <div id="box"></div>
+</body>
+</html>
+<script src="./latest.js"></script>
